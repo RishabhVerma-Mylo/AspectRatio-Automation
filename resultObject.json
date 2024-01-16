@@ -1,0 +1,145 @@
+[
+  {
+    "_id": "5220",
+    "itemType": "BANNER",
+    "image": "https://images.myloapp.in/general_tab/170315544485.webp",
+    "itemName": "Category L2: 7521 Top Banner"
+  },
+  {
+    "_id": "5225",
+    "itemName": "Category L2: 7521 Marquee Multiple Banners",
+    "itemType": "MARQUEE_BANNERS",
+    "items": [
+      {
+        "_id": "65840e4ec65356aa7be4610e",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315549949.webp",
+        "itemName": "Category L2: 7521 Marquee banner 1"
+      },
+      {
+        "_id": "65840e7b78dec9503bc30ae5",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315553822.webp",
+        "itemName": "Category L2: 7521 Marquee banner 2"
+      },
+      {
+        "_id": "65840ea4b8e80a1701410bdc",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315558134.webp",
+        "itemName": "Category L2: 7521 Marquee banner 3"
+      },
+      {
+        "_id": "65840ec71fc3e135a55c3c1d",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315560517.webp",
+        "itemName": "Category L2: 7521 Marquee banner 4"
+      }
+    ]
+  },
+  {
+    "_id": "5228",
+    "itemName": "Category L2: 7521 Multiple Cards",
+    "itemType": "MULTIPLE_ITEMS",
+    "items": [
+      {
+        "_id": "5226",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315628194.webp",
+        "itemName": "Category L2: 7521 Card 1"
+      },
+      {
+        "_id": "5227",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315631586.webp",
+        "itemName": "Category L2: 7521 Card 2"
+      }
+    ]
+  },
+  {
+    "_id": "5233",
+    "itemName": "Category L2: 7521 Multiple Reasons",
+    "itemType": "MULTIPLE_ITEMS",
+    "items": [
+      {
+        "_id": "5230",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315529875.webp",
+        "itemName": "Category L2: 7521 Reason Banner 1"
+      },
+      {
+        "_id": "5231",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315533086.webp",
+        "itemName": "Category L2: 7521 Reason Banner 2"
+      },
+      {
+        "_id": "5232",
+        "itemType": "BANNER",
+        "image": "https://images.myloapp.in/general_tab/170315537194.webp",
+        "itemName": "Category L2: 7521 Reason Banner 3"
+      }
+    ]
+  },
+  {
+    "_id": "5234",
+    "itemName": "Category L2: 7521 Combos",
+    "itemType": "MULTIPLE_ITEMS",
+    "items": [
+      {
+        "_id": "2986",
+        "itemType": "PRODUCT",
+        "image": "https://images.myloapp.in/skuImages/2986/Listing/Web/EN/Slide_1.webp"
+      },
+      {
+        "_id": "381",
+        "itemType": "PRODUCT",
+        "image": "https://images.myloapp.in/skuImages/381/Listing/Web/EN/Slide_1.webp"
+      }
+    ]
+  },
+  {
+    "_id": "5326",
+    "itemType": "GENERAL_FREEBIE_CLAIMS",
+    "itemName": "Category L2: 7521 Skin Claims"
+  },
+  {
+    "_id": "5235",
+    "itemName": "Category L2: 7521 Explore Products",
+    "itemType": "MULTIPLE_ITEMS",
+    "items": [
+      {
+        "_id": "381",
+        "itemType": "PRODUCT",
+        "image": "https://images.myloapp.in/skuImages/381/Listing/Web/EN/Slide_1.webp"
+      },
+      {
+        "_id": "2986",
+        "itemType": "PRODUCT",
+        "image": "https://images.myloapp.in/skuImages/2986/Listing/Web/EN/Slide_1.webp"
+      },
+      {
+        "_id": "3511",
+        "itemType": "PRODUCT",
+        "image": "https://images.myloapp.in/skuImages/3511/Listing/Web/EN/Slide_1.webp"
+      }
+    ]
+  },
+  {
+    "_id": "5236",
+    "itemType": "BANNER",
+    "image": "https://images.myloapp.in/general_tab/170315688096.gif",
+    "itemName": "Category L2: 7521 philosiphy gif"
+  },
+  {
+    "_id": "5238",
+    "itemType": "REQUEST_CALL_BACK",
+    "image": "",
+    "itemName": "Category L2 : 7521 : Request Callback"
+  },
+  {
+    "_id": "5239",
+    "itemName": "Category L2 : 7521 Category Navigator",
+    "itemType": "L1_CATEGORY_PAGE_NAVIGATOR",
+    "items": [{}, {}, {}, {}]
+  }
+]

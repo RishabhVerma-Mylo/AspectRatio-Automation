@@ -1,17 +1,19 @@
-const data = require('./revisedObject.json')
-const { getAspectRatio } = require('./getImageAspect')
+var fs = require('fs')
+const data = require('./resultObject.json')
 
-const flattenArray = data.flat(2).filter((item) => item._id !== undefined)
+const { getAspectRatio } = require('./utils/getImageAspect')
+const { modifyObject } = require('./utils/modifyObject')
 
-// console.log(flattenArray)
+const flattenArray = modifyObject(data)
 
-const getNewAspectObject = () => {
+console.log(flattenArray.length)
+const getNewAspectObject = (obj) => {
   try {
-    const newAspectObject = flattenArray.map(async (item) => {
+    const newAspectObject = obj.map(async (item) => {
       let aspectRatio = await getAspectRatio(item)
       return {
         ...item,
-        aspectRatio,
+        ...aspectRatio,
       }
     })
 
@@ -21,6 +23,19 @@ const getNewAspectObject = () => {
   }
 }
 
-const newAspectObject = getNewAspectObject()
+const newAspectObject = getNewAspectObject(flattenArray)
 
-Promise.all(newAspectObject).then((res) => console.log(res))
+// console.log('promise array', newAspectObject)
+
+Promise.all(newAspectObject)
+  .then((res) => {
+    fs.writeFile(
+      `./ResultFiles/finalObject-${res[0]._id}.json`,
+      JSON.stringify(res),
+      'utf8',
+      () => console.log('Done Writing')
+    )
+  })
+  .catch((error) => console.log(error))
+
+module.exports = { getNewAspectObject }

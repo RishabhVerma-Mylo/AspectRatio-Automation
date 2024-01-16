@@ -1,7 +1,7 @@
 const axios = require('axios')
 const sharp = require('sharp')
-
-const imageUrl = 'https://images.myloapp.in/general_tab/170315628194.webp' // Replace with the actual image URL
+const { getImageDimensionsAlt } = require('./optimisedImageAspect')
+const imageUrl = 'https://images.myloapp.in/general_tab/170315628194.webp'
 
 function calculateGCF(a, b) {
   while (b !== 0) {
@@ -31,6 +31,7 @@ function calculateAspectRatioWithGCF(width, height, flag = false) {
 }
 
 async function getImageDimensions(url) {
+  let width, height
   try {
     // Fetch the image data using axios
     const response = await axios.get(url, { responseType: 'arraybuffer' })
@@ -52,17 +53,22 @@ let getAspectRatio = async (obj) => {
   try {
     let ratio = true
     let { image } = obj
+    if (!image) {
+      throw error('Image not present')
+    }
     // console.log(image)
     let { width, height } = await getImageDimensions(image)
     // console.log(width, height)
     const aspectRatio = calculateAspectRatioWithGCF(width, height, ratio)
     // console.log(`Aspect Ratio: ${aspectRatio.width}:${aspectRatio.height}`)
-    return { 'Aspect Ratio': `${aspectRatio.width}:${aspectRatio.height}` }
+    return {
+      width,
+      height,
+      'Aspect Ratio': `${aspectRatio.width}:${aspectRatio.height}`,
+    }
   } catch (error) {
-    // console.error('Error loading image:', error.message, obj.image)
+    // console.error('Error loading image:', error.message, obj)
   }
 }
-
-getAspectRatio({})
 
 module.exports = { getAspectRatio }
