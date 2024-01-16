@@ -14,5 +14,4 @@ jsonsInDir.forEach((file) => {
   data.push(...json)
 })
 
-console.log(data)
 writeToExcel(data)

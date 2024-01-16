@@ -1,6 +1,4 @@
-let {
-  data: { items: data },
-} = require('../script.json')
+let { data } = require('../script.json')
 let typeToKeep = ['BANNER', 'MARQUEE_BANNERS', 'MULTIPLE_ITEMS', 'PRODUCT']
 
 let returnObj = (obj) => {
@@ -15,13 +13,8 @@ let returnObj = (obj) => {
 }
 
 function returnScriptObj(obj) {
-  let parentObj = {
-    _id: obj._id,
-    itemName: obj.itemName,
-    itemType: obj.itemType,
-  }
   // console.log(parentObj)
-  return obj.items.map((item) => {
+  return obj.map((item) => {
     if (item.items && item.items.length > 0) {
       return {
         _id: item._id,
@@ -42,8 +35,8 @@ function returnScriptObj(obj) {
 function modifyObject(obj) {
   const newData = obj.map((item) => {
     // console.log(!typeToKeep.includes(item.itemType), item.itemType)
-    if (!typeToKeep.includes(item.itemType)) return
-    if (item.items && item.items.length > 0) return returnScriptObj(item)
+    // if (!typeToKeep.includes(item.itemType)) return
+    if (item.items && item.items.length > 0) return returnObj(item)
     else
       return {
         _id: item._id,
@@ -57,6 +50,9 @@ function modifyObject(obj) {
 
   return newData
 }
-console.log(modifyObject(data))
+
+function customModifyObject(items) {}
+
+console.log(returnScriptObj(data.items))
 
 module.exports = { modifyObject, returnScriptObj }
