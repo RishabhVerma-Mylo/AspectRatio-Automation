@@ -27,7 +27,6 @@ async function sendPostRequest(url, data) {
       const responseData = await response.json()
       var json = JSON.stringify(responseData)
 
-      // console.log('Response:', responseData)
       fs.writeFile(`./JsonFiles/resultObject-${item}.json`, json, 'utf8', () =>
         console.log('Done Writing')
       )
@@ -39,3 +38,5 @@ async function sendPostRequest(url, data) {
 
 // Call the function to send POST request
 sendPostRequest(apiUrl, dataArray)
+
+module.export = { sendPostRequest }
