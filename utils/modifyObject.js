@@ -1,5 +1,7 @@
-let { data } = require('../script.json')
+// let { data } = require('../JsonFiles/resultObject-5179.json')
 let typeToKeep = ['BANNER', 'MARQUEE_BANNERS', 'MULTIPLE_ITEMS']
+
+let typeNotToKeep = ['CHOOSE_SIZE_PRODUCTS']
 
 let returnObj = (obj) => {
   let { items } = obj
@@ -9,6 +11,8 @@ let returnObj = (obj) => {
     itemType: item.itemType,
     image: item.image,
     itemName: item.itemName,
+    deeplink: item.deeplink,
+    deeplinkValue: item.deeplinkValue,
   }))
 }
 
@@ -23,12 +27,14 @@ function modifyObject(obj) {
         itemType: item.itemType,
         image: item.image,
         itemName: item.itemName,
+        deeplink: item.deeplink,
+        deeplinkValue: item.deeplinkValue,
       }
   })
 
-  return newData.flat(2).filter((item) => item && item._id !== undefined)
-
-  return newData
+  return newData.flat(2)
 }
+
+// console.log(modifyObject(data.items))
 
 module.exports = { modifyObject }

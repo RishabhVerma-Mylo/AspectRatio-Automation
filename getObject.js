@@ -20,7 +20,7 @@ jsonsInDir.forEach((file) => {
 
   Promise.all(newAspectObject).then((res) => {
     fs.writeFile(
-      `./ResultFiles/finalObject-${res[0]._id}.json`,
+      `./ResultFiles/finalObject-${file}`,
       JSON.stringify(res),
       'utf8',
       () => console.log('Done Writing')
