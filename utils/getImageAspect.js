@@ -1,7 +1,5 @@
 const axios = require('axios')
 const sharp = require('sharp')
-const { getImageDimensionsAlt } = require('./optimisedImageAspect')
-const imageUrl = 'https://images.myloapp.in/general_tab/170315628194.webp'
 
 function calculateGCF(a, b) {
   while (b !== 0) {

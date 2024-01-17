@@ -29,7 +29,7 @@ async function sendPostRequest(url, data) {
 
       // console.log('Response:', responseData)
       fs.writeFile(`./JsonFiles/resultObject-${item}.json`, json, 'utf8', () =>
-        console.log('Done Writing')
+        console.log(`Done Writing resultObject-${item}.json`)
       )
     } catch (error) {
       console.error('Error:', error)
